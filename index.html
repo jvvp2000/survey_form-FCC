@@ -37,9 +37,10 @@
                 <input type="number" id="number" name="Numero" min="1" max="120" class="form-control" placeholder="Age">
             </div>
 
-            <div id="current_role-wrapper">
+            <div id="current_role-wrapper" class="form-group">
                 <p>Which option best describes your current role?</p>
-                <select name="current_role" id="currentRole">
+                <select name="current_role" id="currentRole" class="form-control">
+                    <option disabled selected value>Select current role</option>
                     <option value="student">Student</option>
                     <option value="full_time_job">Full time job</option>
                     <option value="full_time_learner">Full time Learner</option>
@@ -48,57 +49,68 @@
                 </select>
             </div>
 
-            <div id="recommend_frind-wrapper">
+            <div id="recommend_frind-wrapper" class="form-group">
                 <p>Would you recommend freeCodeCamp to a friend?</p>
-                <input type="radio" id="definitely" name="recommend" value="DEFINITELY" checked>
-                <label for="definitely">Definitely</label>
-                <input type="radio" id="maybe" name="recommend" value="MAYBE">
-                <label for="maybe">Maybe</label>
-                <input type="radio" id="not_sure" name="recommend" value="NOTSURE">
-                <label for="not_sure">Not sure</label>
+
+                <label><input type="radio" class="input-radio" name="recommend" value="DEFINITELY"
+                        checked>Definitely</label>
+
+                <label><input type="radio" class="input-radio" name="recommend" value="MAYBE">Maybe</label>
+
+                <label><input type="radio" class="input-radio" name="recommend" value="NOTSURE">Not sure</label>
+
             </div>
-            <div id="favorite_feature-wrapper">
-                What is your favorite feature of freeCodeCamp?
-                <select name="favorite_feature" id="favorite_feature">
+
+            <div id="favorite_feature-wrapper" class="form-group">
+                <p> What is your favorite feature of freeCodeCamp?</p>
+                <select name="favorite_feature" id="favorite_feature" class="form-control">
+                    <option disabled selected value>Select an option</option>
                     <option value="challenges">Challenges</option>
                     <option value="projects">Projects</option>
                     <option value="community">Community</option>
                     <option value="open_source">Open Source</option>
                 </select>
             </div>
-            <div id="improve-wrapper">
+
+            <div id="improve-wrapper" class="form-group">
                 <p>What would you like to see improved? <span class="clue">(Check all that apply)</span></p>
-                <input type="checkbox" id="frontend" name="improve" value="FRONTEND">
-                <label for="frontend">Front-end Projects</label>
-                <input type="checkbox" id="backend" name="improve" value="BACKEND">
-                <label for="backend">Back-end Projects</label>
-                <input type="checkbox" id="data_visuali" name="improve" value="DATAVIS">
-                <label for="data_visuali">Data Visualization</label>
-                <input type="checkbox" id="challenges" name="improve" value="CHALLENGES">
-                <label for="challenges">Challenges</label>
-                <input type="checkbox" id="open_source_comm" name="improve" value="OPENSOURCE">
-                <label for="open_source_comm">Open Source Community</label>
-                <input type="checkbox" id="gitter_help" name="improve" value="GITTER">
-                <label for="gitter_help">Gitter Help</label>
-                <input type="checkbox" id="videos" name="improve" value="VIDEOS">
-                <label for="videos">Videos</label>
-                <input type="checkbox" id="city_meetups" name="improve" value="CITTY">
-                <label for="city_meetups">City Meetups</label>
-                <input type="checkbox" id="wiki" name="improve" value="WIKI">
-                <label for="wiki">Wiki</label>
-                <input type="checkbox" id="forum" name="improve" value="forum">
-                <label for="forum">Forum</label>
-                <input type="checkbox" id="additional_courses" name="improve" value="ADDITIONAL">
-                <label for="">Additional Courses</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="FRONTEND">Front-end
+                    Projects</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="BACKEND">Back-end
+                    Projects</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="DATAVIS">Data
+                    Visualization</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve"
+                        value="CHALLENGES">Challenges</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="OPENSOURCE">Open Source
+                    Community</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="GITTER">Gitter Help</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="VIDEOS">Videos</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="CITTY">City Meetups</label>
+
+                <label> <input type="checkbox" class="input-checkbox" name="improve" value="WIKI">Wiki</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="forum">Forum</label>
+
+                <label><input type="checkbox" class="input-checkbox" name="improve" value="ADDITIONAL">Additional
+                    Courses</label>
             </div>
-            <div id="suggestions-wrapper">
-                <textarea name="suggestions" id="textarea-suggestions" cols="30" rows="10"
+            <div id="suggestions-wrapper" class="form-group">
+                <textarea name="suggestions" id="textarea-suggestions" class="input-textarea"
                     placeholder="Enter your comment here...">
 
                 </textarea>
             </div>
-            <div id="sub-btn">
-                <input type="button" id="submit">
+            <div id="sub-btn" class="form-group">
+                <button type="submit" id="submit" class="submit-button"> Submit</button>
             </div>
         </form>
     </div>
